@@ -1,0 +1,43 @@
+.somos {
+  font-size: 1.5em;
+  text-align: center;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 15px;
+    font-weight: bold;
+  }
+  span {
+    color: #0876c4;
+  }
+  #somosTexto {
+    font-size: 1.5rem;
+    padding: 10px;
+    line-height: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .somos {
+    display: flex;
+    justify-content: space-evenly;
+    .img-container {
+      margin-top: 100px;
+      height: 500px;
+      width: 700px;
+      background-image: url("../img/aprendeIngles.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .texto {
+      width: 100%;
+      max-width: 800px;
+      text-align: initial;
+      padding: 0px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}

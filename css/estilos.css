@@ -1,0 +1,337 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  flex-direction: column;
+}
+header img {
+  margin: 10px;
+}
+header .custom-navbar-style {
+  background-color: rgb(245, 245, 245);
+}
+header .custom-navbar-style .nav-estilo {
+  font-size: 1.25rem;
+  padding: 2px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(37, 7, 7);
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header img {
+    width: 40%;
+  }
+  header .nav-link {
+    font-size: 1.75rem;
+    transition: color 0.3s;
+  }
+  header .nav-link:hover {
+    color: #0876c4;
+  }
+}
+.cartel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: calc(100vh - 20px);
+  color: white;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.cartel h1 {
+  font-size: 5em;
+}
+.cartel .botonA {
+  font-size: 2rem;
+  color: white;
+  background-color: #00487b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 30px;
+  border-style: solid;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.cartel .botonA:hover {
+  background-color: #0876c4;
+}
+
+@media (min-width: 768px) {
+  .cartel {
+    height: 77vh;
+  }
+  .cartel h1 {
+    font-size: 8rem;
+  }
+}
+.somos {
+  font-size: 1.5em;
+  text-align: center;
+}
+.somos h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 15px;
+  font-weight: bold;
+}
+.somos span {
+  color: #0876c4;
+}
+.somos #somosTexto {
+  font-size: 1.5rem;
+  padding: 10px;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  .somos {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .somos .img-container {
+    margin-top: 100px;
+    height: 500px;
+    width: 700px;
+    background-image: url("../img/aprendeIngles.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .somos .texto {
+    width: 100%;
+    max-width: 800px;
+    text-align: initial;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.clases {
+  margin: 10px;
+  text-align: center;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 3fr 3fr;
+  gap: 2px;
+  grid-auto-flow: row;
+  grid-template-areas: "claseN" "claseA" "claseC";
+}
+.clases h1,
+.clases h2,
+.clases h3 {
+  padding: 10px 0px;
+  font-size: 1.5rem;
+  margin: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(228, 224, 224, 0.3);
+}
+.clases #textoNinos,
+.clases #textoAdultos,
+.clases #textoConv {
+  font-size: 1.15rem;
+}
+.clases .claseN {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../img/clasesNiños.png");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+}
+.clases .claseA {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../img/clasesAdultos.jpg");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+}
+.clases .claseC {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)), url("../img/clasesConversacion.jpeg");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px;
+}
+
+@media (min-width: 768px) {
+  .clases {
+    margin: 10px;
+    height: 80vh;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr;
+    gap: 3px;
+    grid-auto-flow: row;
+    grid-template-areas: "claseN claseA claseC" "claseN claseA claseC" "claseN claseA claseC";
+  }
+  .clases h1,
+  .clases h2,
+  .clases h3 {
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(228, 224, 224, 0.3);
+  }
+  .clases .transparencia {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .clases #textoNinos,
+  .clases #textoAdultos,
+  .clases #textoConv {
+    display: list-item;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-weight: bolder;
+  }
+}
+.boton {
+  font-size: 1rem;
+  color: white;
+  background-color: #00487b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin: 15px;
+  border-style: solid;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.boton:hover {
+  background-color: #0876c4;
+}
+
+.caracteristicas {
+  padding-top: 80px;
+}
+.caracteristicas h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-top: 15px;
+  text-align: center;
+}
+.caracteristicas .negrita {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.caracteristicas p {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .caracteristicas {
+    padding-top: 80px;
+  }
+}
+.formulario {
+  display: flex;
+  margin: 15px;
+  flex-direction: column;
+  text-align: center;
+}
+.formulario h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 15px;
+}
+.formulario .lbl {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 0 auto;
+}
+.formulario .area {
+  border: black 1px solid;
+}
+.formulario .areaComentario {
+  border: black 1px solid;
+}
+.formulario .bContacto {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .area {
+    margin: 10px auto;
+    width: 25vw;
+  }
+  .areaComentario {
+    width: 35vw;
+    margin: 10px auto;
+  }
+  .bContacto {
+    margin: 25px auto;
+    font-size: 5rem;
+  }
+}
+.whatsapp-button {
+  position: fixed;
+  bottom: 100px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.whatsapp-button:hover {
+  transform: scale(1.5, 1.5);
+}
+.whatsapp-button img {
+  width: 50px;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-button {
+    right: 80px;
+    margin-bottom: 10px;
+  }
+  .whatsapp-button img {
+    width: 80px;
+  }
+}
+footer {
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  color: black;
+  font-size: 1.25rem;
+  text-align: center;
+}
+footer p {
+  padding: 10px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
